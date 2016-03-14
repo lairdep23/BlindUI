@@ -14,6 +14,9 @@
 		204B82411C95E5E7004B4191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204B823F1C95E5E7004B4191 /* LaunchScreen.storyboard */; };
 		204B824A1C95F618004B4191 /* LoginPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204B82491C95F618004B4191 /* LoginPageVC.swift */; };
 		204B824C1C960A64004B4191 /* SuggestOrFindVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204B824B1C960A64004B4191 /* SuggestOrFindVC.swift */; };
+		20F08F521C97783000B38267 /* FindAnExpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F08F511C97783000B38267 /* FindAnExpVC.swift */; };
+		20F08F541C97784600B38267 /* SubmitAnExpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F08F531C97784600B38267 /* SubmitAnExpVC.swift */; };
+		20F08F561C97820600B38267 /* AfterSubmitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F08F551C97820600B38267 /* AfterSubmitVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		204B82421C95E5E7004B4191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		204B82491C95F618004B4191 /* LoginPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageVC.swift; sourceTree = "<group>"; };
 		204B824B1C960A64004B4191 /* SuggestOrFindVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestOrFindVC.swift; sourceTree = "<group>"; };
+		20F08F511C97783000B38267 /* FindAnExpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindAnExpVC.swift; sourceTree = "<group>"; };
+		20F08F531C97784600B38267 /* SubmitAnExpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitAnExpVC.swift; sourceTree = "<group>"; };
+		20F08F551C97820600B38267 /* AfterSubmitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AfterSubmitVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,9 @@
 				204B82381C95E5E7004B4191 /* ViewController.swift */,
 				204B82491C95F618004B4191 /* LoginPageVC.swift */,
 				204B824B1C960A64004B4191 /* SuggestOrFindVC.swift */,
+				20F08F511C97783000B38267 /* FindAnExpVC.swift */,
+				20F08F531C97784600B38267 /* SubmitAnExpVC.swift */,
+				20F08F551C97820600B38267 /* AfterSubmitVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -150,10 +159,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F08F521C97783000B38267 /* FindAnExpVC.swift in Sources */,
 				204B82391C95E5E7004B4191 /* ViewController.swift in Sources */,
 				204B824C1C960A64004B4191 /* SuggestOrFindVC.swift in Sources */,
+				20F08F561C97820600B38267 /* AfterSubmitVC.swift in Sources */,
 				204B82371C95E5E7004B4191 /* AppDelegate.swift in Sources */,
 				204B824A1C95F618004B4191 /* LoginPageVC.swift in Sources */,
+				20F08F541C97784600B38267 /* SubmitAnExpVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +315,7 @@
 				204B82471C95E5E7004B4191 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
