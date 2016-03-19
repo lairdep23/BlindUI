@@ -17,9 +17,9 @@ class SuggestOrFindVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        FindAnExpImage.layer.cornerRadius = 10.0
+        FindAnExpImage.layer.cornerRadius = CR
         FindAnExpImage.clipsToBounds = true
-        SuggestAnExpImage.layer.cornerRadius = 10.0
+        SuggestAnExpImage.layer.cornerRadius = CR
         SuggestAnExpImage.clipsToBounds = true
 
         

@@ -17,9 +17,9 @@ class AfterSubmitVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        goOnDateButton.layer.cornerRadius = 5.0
+        goOnDateButton.layer.cornerRadius = CR
         goOnDateButton.clipsToBounds = true
-        backToHomeButton.layer.cornerRadius = 5.0
+        backToHomeButton.layer.cornerRadius = CR
         backToHomeButton.clipsToBounds = true
     
     }

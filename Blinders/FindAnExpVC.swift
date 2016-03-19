@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FindAnExpVC: UIViewController, UITextFieldDelegate {
+class FindAnExpVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var nearCityTextField: UITextField!
     
@@ -20,18 +20,42 @@ class FindAnExpVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var findButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         nearCityTextField.delegate = self
         
-        findButton.layer.cornerRadius = 5.0
+        findButton.layer.cornerRadius = CR
         findButton.clipsToBounds = true
+        
+        activityPicker.delegate = self
+        activityPicker.dataSource = self
+        budgetPicker.delegate = self
+        budgetPicker.dataSource = self
     }
-
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
     }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView == activityPicker {
+            return kindOfActivityArray.count
+        } else {
+            return budgetArray.count
+        }
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == activityPicker {
+            return kindOfActivityArray[row]
+        } else {
+            return budgetArray[row]
+        }
+    }
+   
+    
+    
 
 }
