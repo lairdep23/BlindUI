@@ -8,7 +8,12 @@
 
 import UIKit
 
+var selectedDate: Dictionary<String, String> = [:]
+
 class FindAnExpVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    
+    
 
     @IBOutlet weak var nearCityTextField: UITextField!
     
@@ -35,6 +40,11 @@ class FindAnExpVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, 
         budgetPicker.dataSource = self
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -54,8 +64,37 @@ class FindAnExpVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, 
             return budgetArray[row]
         }
     }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if kindOfActivityArray[row] == "Food" {
+            if budgetArray[row] == "$: Inexpensive" {
+                selectedDate = foodCheap
+            } else if budgetArray[row] == "$$: Moderate"{
+                selectedDate = foodMod
+            } else {
+                print("No date")
+            }
+        } else {
+            print("No Date")
+        }
+        
+        print(selectedDate)
+    }
+
+    
+    @IBAction func findButtonPressed(sender: AnyObject) {
+        
+        
+        
+        
+        performSegueWithIdentifier("findButtonSegue", sender: nil)
+            
+        }
+        
+    
+    }
+    
    
     
     
 
-}

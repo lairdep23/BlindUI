@@ -11,6 +11,12 @@ import UIKit
 class PrepAdviceVC: UIViewController {
 
     @IBOutlet weak var getDirectionsButton: UIButton!
+    @IBOutlet weak var youllNeedLabel: UILabel!
+    
+    @IBOutlet weak var attireLabel: UILabel!
+    @IBOutlet weak var driveTimeLabel: UILabel!
+    
+    @IBOutlet weak var otherLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +24,22 @@ class PrepAdviceVC: UIViewController {
         getDirectionsButton.layer.cornerRadius = CR
         getDirectionsButton.clipsToBounds = true
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        
+        youllNeedLabel.text = selectedDate["whatYouNeed"]
+        attireLabel.text = selectedDate["attire"]
+        driveTimeLabel.text = selectedDate["driveTime"]
+        otherLabel.text = selectedDate["other"]
+        
+        
+        
+        
+        
+    }
+    
+    
 
     
 
