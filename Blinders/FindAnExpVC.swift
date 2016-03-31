@@ -9,6 +9,8 @@
 import UIKit
 
 var selectedDate: Dictionary<String, String> = [:]
+var selectedKind: String = ""
+var selectedBudget: String = ""
 
 class FindAnExpVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -66,25 +68,38 @@ class FindAnExpVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, 
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if kindOfActivityArray[row] == "Food" {
-            if budgetArray[row] == "$: Inexpensive" {
-                selectedDate = foodCheap
-            } else if budgetArray[row] == "$$: Moderate"{
-                selectedDate = foodMod
-            } else {
-                print("No date")
-            }
+        if pickerView == activityPicker {
+            selectedKind = kindOfActivityArray[row]
+        } else if pickerView == budgetPicker {
+            selectedBudget = budgetArray[row]
         } else {
-            print("No Date")
+            selectedKind = ""
+            selectedBudget = ""
         }
+        print(selectedKind, selectedBudget)
         
-        print(selectedDate)
     }
 
     
     @IBAction func findButtonPressed(sender: AnyObject) {
         
+        if selectedKind == "Food" {
+            if selectedBudget == "$: Inexpensive" {
+                selectedDate = foodCheap
+            } else if selectedBudget == "$$: Moderate" {
+                selectedDate = foodMod
+            } else if selectedBudget == "$$$: Pricey" {
+                selectedDate = foodPricey
+            } else {
+                selectedDate = foodHighEnd
+            }
+        } else if selectedKind == "Nightlife" {
+            if selectedBudget == "$: Inexpensive" {
+                selectedDate = nightCheap
+            }
+        }
         
+        print(selectedDate)
         
         
         performSegueWithIdentifier("findButtonSegue", sender: nil)

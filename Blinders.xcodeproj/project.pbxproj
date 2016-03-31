@@ -114,6 +114,7 @@
 		204B82351C95E5E7004B4191 /* Blinders */ = {
 			isa = PBXGroup;
 			children = (
+				20E9D2B71CACE4A8005100CA /* Model */,
 				201A4A1E1C9AF733009397D7 /* Utilities */,
 				201A4A1B1C9AF6B2009397D7 /* Services */,
 				208725C51C99FD1200CA5F63 /* Frameworks */,
@@ -123,7 +124,6 @@
 				204B823D1C95E5E7004B4191 /* Assets.xcassets */,
 				204B823F1C95E5E7004B4191 /* LaunchScreen.storyboard */,
 				204B82421C95E5E7004B4191 /* Info.plist */,
-				20E127881CAC16E2006356C1 /* Dates.swift */,
 			);
 			path = Blinders;
 			sourceTree = "<group>";
@@ -151,6 +151,14 @@
 				208725C81C99FD2100CA5F63 /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20E9D2B71CACE4A8005100CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20E127881CAC16E2006356C1 /* Dates.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		A74E5145F42A849BF002CFDD /* Pods */ = {
